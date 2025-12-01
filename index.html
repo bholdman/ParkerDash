@@ -1,480 +1,825 @@
-
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
- 
-    <meta charset="utf-8">  
-    
-    <title>BABY KIDS HTML</title> <!--insert your title here-->  
-    <meta name="description" content="nicdark Framework"> <!--insert your description here-->  
-    <meta name="author" content="nicdark"> <!--insert your name here-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--meta responsive-->
-    
-    <!--START CSS--> 
-    <link rel="stylesheet" href="css/nicdark_style.css"> <!--style-->
-    <link rel="stylesheet" href="css/nicdark_responsive.css"> <!--nicdark_responsive-->
+  <meta charset="UTF-8" />
+  <title>ParkerDash — Apps, Ideas & Tiny Bits of Magic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="ParkerDash builds playful and practical digital products, including Magic Moments and a Greek House Management app."
+  />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --accent: #6366f1;
+      --accent-soft: rgba(99, 102, 241, 0.08);
+      --accent-2: #f59e0b;
+      --text: #0f172a;
+      --muted: #64748b;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --border-subtle: #f1f5f9;
+      --radius-xl: 24px;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.06);
+    }
 
-    <!--revslider-->
-    <link rel="stylesheet" href="css/revslider/settings.css"> <!--revslider-->
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <!--END CSS-->
-    
-    <!--google fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> <!-- font-family: 'Montserrat', sans-serif; -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'> <!-- font-family: 'Raleway', sans-serif; -->
-    <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'> <!-- font-family: 'Montez', cursive; -->
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", 
+        system-ui, "Segoe UI", sans-serif;
+      background: linear-gradient(to bottom, #fafbfc 0%, #ffffff 100%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
 
-    <!--[if lt IE 9]>  
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
-    <![endif]-->  
-    
-    <!--FAVICONS-->
-    <link rel="shortcut icon" href="img/favicon/favicon.ico">
-    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-    <!--END FAVICONS-->
-    
-    
-</head>  
-<body id="start_nicdark_framework">
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-<div class="nicdark_site">
-    <div class="nicdark_site_fullwidth nicdark_clearfix"><div class="nicdark_overlay"></div>
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px 80px;
+    }
 
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 64px;
+      padding: 16px 0;
+    }
 
-<!--start-->
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.3rem;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+    }
 
-<!--start section-->
-<section id="nicdark_parallax_title" class="nicdark_section nicdark_imgparallax nicdark_parallaxx_img-courses">
+    .brand-text-main {
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
 
-    <div class="nicdark_filter greydark">
+    .brand-text-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
 
-        <!--start nicdark_container-->
-        <div class="nicdark_container nicdark_clearfix">
+    nav {
+      display: flex;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
 
-            <div class="grid grid_12">
-                <div class="nicdark_space100"></div>
-                <div class="nicdark_space100"></div>
-                <h1 class="white subtitle">SCHOOL SUPPLY LISTS BY GRADE</h1>
-                <div class="nicdark_space10"></div>
-                <h3 class="subtitle white">Use the form below to find your list and easily purchase the items</h3>
-                <div class="nicdark_space20"></div>
-                <div class="nicdark_divider left big"><span class="nicdark_bg_white nicdark_radius"></span></div>
-                <div class="nicdark_space40"></div>
-                <div class="nicdark_space50"></div>
+    nav a {
+      color: var(--muted);
+      padding: 8px 16px;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 48px;
+      margin-bottom: 80px;
+      align-items: center;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 4vw + 1rem, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      line-height: 1.1;
+      color: var(--text);
+    }
+
+    .hero-highlight {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      max-width: 560px;
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+    }
+
+    .btn-ghost {
+      border-color: var(--border);
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      transform: translateY(-2px);
+    }
+
+    .hero-note {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-note strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .hero-card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 32px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 100px;
+      padding: 8px 14px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    .hero-card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .hero-card-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .hero-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .pill {
+      padding: 14px 18px;
+      border-radius: 12px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pill-label {
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .pill-value {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+
+    .section {
+      margin-bottom: 80px;
+    }
+
+    .section-header {
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    @media (max-width: 720px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 20px;
+      padding: 32px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    }
+
+    .card-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      gap: 12px;
+    }
+
+    .app-name {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+
+    .app-tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .bullet-list {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    .bullet-list li {
+      margin-bottom: 8px;
+    }
+
+    .bullet-list strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .link-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 16px;
+      font-size: 0.9rem;
+    }
+
+    .link-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-weight: 600;
+      transition: gap 0.2s ease;
+    }
+
+    .link-text:hover {
+      gap: 10px;
+    }
+
+    .pill-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .contact {
+      background: linear-gradient(135deg, var(--bg-alt) 0%, var(--card) 100%);
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      padding: 48px;
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 800px) {
+      .contact {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 32px;
+      }
+    }
+
+    .contact-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .contact-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .contact-detail {
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-detail span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .contact-detail a {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .contact-detail a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="logo">P</div>
+        <div>
+          <div class="brand-text-main">ParkerDash</div>
+          <div class="brand-text-sub">We build small things that feel big.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#apps">Apps</a>
+        <a href="#about">About</a>
+        <a href="#contact">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="hero-kicker">ParkerDash Studio</div>
+          <h1 id="hero-title" class="hero-title">
+            Tiny teams, <span class="hero-highlight">mighty moments</span>.
+          </h1>
+          <p class="hero-subtitle">
+            ParkerDash designs playful and practical products—from apps that put
+            Santa in your living room to tools that keep Greek houses running
+            smoothly.
+          </p>
+          <div class="hero-cta-row">
+            <a href="#apps" class="btn-primary">
+              Explore apps
+              <span>↗</span>
+            </a>
+            <a href="#contact" class="btn-ghost">
+              Get support
+              <span>✉</span>
+            </a>
+          </div>
+          <p class="hero-note">
+            Currently live: <strong>Magic Moments</strong> &amp; the
+            <strong>Greek House Management</strong> app. More experiments
+            coming soon.
+          </p>
+        </div>
+
+        <aside class="hero-card" aria-label="ParkerDash at a glance">
+          <span class="badge">
+            <span class="badge-dot"></span>
+            Building in the App Store
+          </span>
+          <div class="hero-card-title">ParkerDash in a nutshell</div>
+          <div class="hero-card-sub">
+            Small, focused, and a little obsessed with delightful details.
+          </div>
+
+          <div class="hero-stack">
+            <div class="pill">
+              <span class="pill-label">Focus</span>
+              <span class="pill-value">Playful, polished utilities</span>
             </div>
-
-        </div>
-        <!--end nicdark_container-->
-
-    </div>
-     
-</section>
-<!--end section-->
-
-<section class="nicdark_section nicdark_bg_greydark">
-    
-    <!--start nicdark_container-->
-    <div class="nicdark_container nicdark_clearfix">
-        
-
-        <div class="grid grid_12">
-            
-            <!--start nicdark_tabs-->
-            <div class="nicdark_tab nicdark_margintop50_negative ui-tabs ui-widget ui-widget-content ui-corner-all">
-                
-                <ul class="nicdark_tabslist greydark ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
-                    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="true"><a title="FIND YOUR SCHOOL SUPPLIES" href="#tabs-1" class="nicdark_tooltip nicdark_btn nicdark_bg_yellow medium nicdark_radius_top white ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1"><i class="icon-graduation-cap-1 nicdark_displaynone_iphoneland nicdark_displaynone_iphonepotr nicdark_marginright10"></i>FIND YOUR SCHOOL SUPPLY LIST</a></li>
-                    <!-- <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-2" aria-labelledby="ui-id-2" aria-selected="false"><a title="AMAZING EVENTS" href="#tabs-2" class="nicdark_tooltip nicdark_btn nicdark_bg_orange medium nicdark_radius_top white ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2"><i class="icon-calendar-2 nicdark_displaynone_iphoneland nicdark_displaynone_iphonepotr nicdark_marginright10"></i>EVENTS</a></li> -->
-                    <!-- <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-3" aria-labelledby="ui-id-3" aria-selected="false"><a title="REQUEST A FREE QUOTE" href="#tabs-3" class="nicdark_tooltip nicdark_btn nicdark_bg_red medium nicdark_radius_top white ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3"><i class="icon-paper-plane-1 nicdark_displaynone_iphoneland nicdark_displaynone_iphonepotr nicdark_marginright10"></i>CONTACT</a></li> -->
-                </ul>
-
-                <div class="nicdark_tabs">
-                    
-                    <div class="nicdark_margin20 ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-1" aria-labelledby="ui-id-1" role="tabpanel" aria-expanded="true" aria-hidden="false" style="width:100%">
-                        <div class="nicdark_focus nicdark_width_percentage25">
-                            <div class="nicdark_marginleft20 nicdark_disable_marginleft_iphoneland nicdark_disable_marginleft_iphonepotr">
-                                <select class="nicdark_bg_greydark2 nicdark_radius nicdark_shadow grey medium subtitle">
-                                    <option selected="selected" disabled="true">Select a School</option>
-                                    <option>Cape Girardeau Public Schools</option>
-                                    <option>Jackson R2 School District</option>
-                                    <option>Notre Dame High School</option>
-                                </select>       
-                            </div>
-                        </div>
-                        <div class="nicdark_focus nicdark_width_percentage25">
-                            <div class="nicdark_marginleft20 nicdark_disable_marginleft_iphoneland nicdark_disable_marginleft_iphonepotr">
-                                <select class="nicdark_bg_greydark2 nicdark_radius nicdark_shadow grey medium subtitle">
-                                    <option selected="selected" disabled="true">Select a Grade</option>
-                                    <option>Kindergarten</option>
-                                    <option>1st Grade</option>
-                                    <option>2nd Grade</option>
-                                    <option>3rd Grade</option>
-                                    <option>4th Grade</option>
-                                    <option>5th Grade</option>
-                                    <option>6th Grade</option>
-                                    <option>7th Grade</option>
-                                    <option>8th Grade</option>
-                                    <option>9th Grade</option>
-                                    <option>10th Grade</option>
-                                    <option>11th Grade</option>
-                                    <option>12th Grade</option>
-                                </select>       
-                            </div>
-                        </div>
-                        <!-- <div class="nicdark_focus nicdark_width_percentage25">
-                            <div class="nicdark_marginleft20 nicdark_disable_marginleft_iphoneland nicdark_disable_marginleft_iphonepotr">
-                                <input class="nicdark_bg_greydark2 nicdark_radius nicdark_shadow grey medium subtitle nicdark_calendar hasDatepicker" placeholder="DATE" type="text" value="" id="dp1595535989863">       
-                            </div>       
-                        </div> -->
-                        <!-- <div class="nicdark_focus nicdark_width_percentage25">
-                            <div class="nicdark_marginleft20 nicdark_disable_marginleft_iphoneland nicdark_disable_marginleft_iphonepotr">
-                                <input class="nicdark_btn fullwidth nicdark_bg_yellow medium nicdark_shadow nicdark_radius white nicdark_press" type="submit" value="SEARCH">     
-                            </div>
-                        </div>     -->
-                    </div>
-                    
-                    <div class="nicdark_margin20 ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-2" aria-labelledby="ui-id-2" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
-                        <div class="nicdark_focus nicdark_width_percentage25">
-                            <input class="nicdark_bg_greydark2 nicdark_radius nicdark_shadow grey medium subtitle" type="text" placeholder="NAME" value="" size="200">       
-                        </div>
-                        <div class="nicdark_focus nicdark_width_percentage25">
-                            <div class="nicdark_marginleft20 nicdark_disable_marginleft_iphoneland nicdark_disable_marginleft_iphonepotr">
-                                <select class="nicdark_bg_greydark2 nicdark_radius nicdark_shadow grey medium subtitle">
-                                    <option>TYPE</option>
-                                    <option>FIRST</option>
-                                    <option>SECOND</option>
-                                </select>       
-                            </div>
-                        </div>
-                        <div class="nicdark_focus nicdark_width_percentage25">
-                            <div class="nicdark_marginleft20 nicdark_disable_marginleft_iphoneland nicdark_disable_marginleft_iphonepotr">
-                                <input class="nicdark_bg_greydark2 nicdark_radius nicdark_shadow grey medium subtitle nicdark_calendar hasDatepicker" placeholder="DATE" type="text" value="" id="dp1595535989864">       
-                            </div>       
-                        </div>
-                        <div class="nicdark_focus nicdark_width_percentage25">
-                            <div class="nicdark_marginleft20 nicdark_disable_marginleft_iphoneland nicdark_disable_marginleft_iphonepotr">
-                                <input class="nicdark_btn fullwidth nicdark_bg_orange medium nicdark_shadow nicdark_radius white nicdark_press" type="submit" value="SEARCH">     
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="nicdark_margin20 ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-3" aria-labelledby="ui-id-3" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
-                        <div class="nicdark_focus nicdark_width_percentage25">
-                            <input class="nicdark_bg_greydark2 nicdark_radius nicdark_shadow grey medium subtitle" type="text" placeholder="NAME" value="" size="200">       
-                        </div>
-                        <div class="nicdark_focus nicdark_width_percentage25">
-                            <div class="nicdark_marginleft20 nicdark_disable_marginleft_iphoneland nicdark_disable_marginleft_iphonepotr">
-                                <input class="nicdark_bg_greydark2 nicdark_radius nicdark_shadow grey medium subtitle" type="text" placeholder="EM@IL" value="" size="200">      
-                            </div>
-                        </div>
-                        <div class="nicdark_focus nicdark_width_percentage25">
-                            <div class="nicdark_marginleft20 nicdark_disable_marginleft_iphoneland nicdark_disable_marginleft_iphonepotr">
-                                <input class="nicdark_bg_greydark2 nicdark_radius nicdark_shadow grey medium subtitle" type="text" placeholder="MESS" value="" size="200">       
-                            </div>       
-                        </div>
-                        <div class="nicdark_focus nicdark_width_percentage25">
-                            <div class="nicdark_marginleft20 nicdark_disable_marginleft_iphoneland nicdark_disable_marginleft_iphonepotr">
-                                <input class="nicdark_btn fullwidth nicdark_bg_red medium nicdark_shadow nicdark_radius white nicdark_press" type="submit" value="CONTACT">     
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+            <div class="pill">
+              <span class="pill-label">Platforms</span>
+              <span class="pill-value">iOS • iPadOS (web coming soon)</span>
             </div>
-            <!--end nicdark_tabs-->   
-
-        </div>
-
-
-    </div>
-    <!--end nicdark_container-->
-
-</section>
-
-
-<!--start section-->
-<section class="nicdark_section">
-
-    <!--start nicdark_container-->
-    <div class="nicdark_container nicdark_clearfix">
-
-
-        <div class="nicdark_space50"></div>
-
-
-        <div class="grid grid_3">
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center"> 
-                <div style="background:url(img/courses/img3.jpg); background-size:cover;" class="nicdark_archive1 nicdark_radius">
-                    <div class="nicdark_filter orange nicdark_radius_top">
-                        <div class="nicdark_space60"></div>
-                        <a href="#" class="nicdark_zoom white nicdark_btn_icon nicdark_bg_greydark big nicdark_radius_circle">70.00<br><small>USD</small></a>
-                        <div class="nicdark_space60"></div>
-                    </div>
-                </div>
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">WATER COLOR</h4>
-                </div>
-                <div class="nicdark_margin20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam condimentum nec. Morbi a commodo neque, sit amet tempor arcu..</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-course.html" class="white nicdark_btn nicdark_bg_orange medium nicdark_radius nicdark_shadow nicdark_press">MORE INFO</a>
-                </div>
+            <div class="pill">
+              <span class="pill-label">Support</span>
+              <span class="pill-value">Friendly &amp; human</span>
             </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- APPS -->
+      <section id="apps" class="section" aria-labelledby="apps-title">
+        <div class="section-header">
+          <div>
+            <div class="tag">Current Projects</div>
+            <h2 id="apps-title" class="section-title">Apps by ParkerDash</h2>
+          </div>
+          <p class="section-sub">
+            We ship focused, opinionated products. Here are the first two to
+            make it out of our lab.
+          </p>
         </div>
 
-        <div class="grid grid_3">
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center"> 
-                <div style="background:url(img/courses/img2.jpg); background-size:cover;" class="nicdark_archive1 nicdark_radius">
-                    <div class="nicdark_filter yellow nicdark_radius_top">
-                        <div class="nicdark_space60"></div>
-                        <a href="#" class="nicdark_zoom white nicdark_btn_icon nicdark_bg_greydark big nicdark_radius_circle">49.00<br><small>USD</small></a>
-                        <div class="nicdark_space60"></div>
-                    </div>
-                </div>
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">OIL PAINTING</h4>
-                </div>
-                <div class="nicdark_margin20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam condimentum nec. Morbi a commodo neque, sit amet tempor arcu..</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-course.html" class="white nicdark_btn nicdark_bg_yellow medium nicdark_radius nicdark_shadow nicdark_press">MORE INFO</a>
-                </div>
+        <div class="grid">
+          <!-- Magic Moments -->
+          <article class="card" aria-labelledby="magic-moments-title">
+            <div class="card-accent"></div>
+            <div class="card-header-row">
+              <h3 id="magic-moments-title" class="app-name">
+                Magic Moments
+              </h3>
+              <span class="pill-mini">Family • AR-style fun</span>
             </div>
-        </div>
-
-        <div class="grid grid_3">
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center"> 
-                <div style="background:url(img/courses/img1.jpg); background-size:cover;" class="nicdark_archive1 nicdark_radius">
-                    <div class="nicdark_filter green nicdark_radius_top">
-                        <div class="nicdark_space60"></div>
-                        <a href="#" class="nicdark_zoom white nicdark_btn_icon nicdark_bg_greydark big nicdark_radius_circle">32.00<br><small>USD</small></a>
-                        <div class="nicdark_space60"></div>
-                    </div>
-                </div>
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">BIOLOGY</h4>
-                </div>
-                <div class="nicdark_margin20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam condimentum nec. Morbi a commodo neque, sit amet tempor arcu..</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-course.html" class="white nicdark_btn nicdark_bg_green medium nicdark_radius nicdark_shadow nicdark_press">MORE INFO</a>
-                </div>
+            <p class="app-tagline">
+              Place make-believe characters right in your home photos.
+            </p>
+            <p class="meta">
+              <span>⭐ Built for creating tiny bits of wonder.</span>
+            </p>
+            <ul class="bullet-list">
+              <li>
+                Drop characters like
+                <strong>Santa Claus</strong> eating cookies next to your
+                Christmas tree.
+              </li>
+              <li>
+                Capture the <strong>Tooth Fairy</strong> leaving a dollar under
+                the pillow.
+              </li>
+              <li>
+                Place friendly creatures outside your house, in the yard, or in
+                any snapshot you like.
+              </li>
+            </ul>
+            <div class="chip-row">
+              <span class="chip">Designed for iPhone &amp; iPad</span>
+              <span class="chip">Simple, parent-friendly controls</span>
+              <span class="chip">No public social network</span>
             </div>
-        </div>
-
-        <div class="grid grid_3">
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center"> 
-                <div style="background:url(img/excursions/img8.jpg); background-size:cover;" class="nicdark_archive1 nicdark_radius">
-                    <div class="nicdark_filter blue nicdark_radius_top">
-                        <div class="nicdark_space60"></div>
-                        <a href="#" class="nicdark_zoom white nicdark_btn_icon nicdark_bg_greydark big nicdark_radius_circle">90.00<br><small>USD</small></a>
-                        <div class="nicdark_space60"></div>
-                    </div>
-                </div>
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">SWIMMING</h4>
-                </div>
-                <div class="nicdark_margin20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam condimentum nec. Morbi a commodo neque, sit amet tempor arcu..</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-course.html" class="white nicdark_btn nicdark_bg_blue medium nicdark_radius nicdark_shadow nicdark_press">MORE INFO</a>
-                </div>
+            <p class="meta">
+              Magic Moments is built as a light-hearted, photo-based experience.
+              All images are stored on your device or wherever you choose to
+              back them up.
+            </p>
+            <div class="link-row">
+              <a href="#" class="link-text">
+                View on the App Store
+                <span>→</span>
+              </a>
             </div>
-        </div>
+          </article>
 
-        <div class="grid grid_3">
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center"> 
-                <div style="background:url(img/excursions/img1.jpg); background-size:cover;" class="nicdark_archive1 nicdark_radius">
-                    <div class="nicdark_filter blue nicdark_radius_top">
-                        <div class="nicdark_space60"></div>
-                        <a href="#" class="nicdark_zoom white nicdark_btn_icon nicdark_bg_greydark big nicdark_radius_circle">20.00<br><small>USD</small></a>
-                        <div class="nicdark_space60"></div>
-                    </div>
-                </div>
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">ENGLISH</h4>
-                </div>
-                <div class="nicdark_margin20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam condimentum nec. Morbi a commodo neque, sit amet tempor arcu..</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-course.html" class="white nicdark_btn nicdark_bg_blue medium nicdark_radius nicdark_shadow nicdark_press">MORE INFO</a>
-                </div>
+          <!-- Greek House Management -->
+          <article class="card" aria-labelledby="greek-house-title">
+            <div class="card-accent"></div>
+            <div class="card-header-row">
+              <h3 id="greek-house-title" class="app-name">
+                Greek House Management
+              </h3>
+              <span class="pill-mini">Productivity • Student life</span>
             </div>
-        </div>
-
-        <div class="grid grid_3">
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center"> 
-                <div style="background:url(img/excursions/img6.jpg); background-size:cover;" class="nicdark_archive1 nicdark_radius">
-                    <div class="nicdark_filter violet nicdark_radius_top">
-                        <div class="nicdark_space60"></div>
-                        <a href="#" class="nicdark_zoom white nicdark_btn_icon nicdark_bg_greydark big nicdark_radius_circle">19.00<br><small>USD</small></a>
-                        <div class="nicdark_space60"></div>
-                    </div>
-                </div>
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">TENNIS PRACTICE</h4>
-                </div>
-                <div class="nicdark_margin20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam condimentum nec. Morbi a commodo neque, sit amet tempor arcu..</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-course.html" class="white nicdark_btn nicdark_bg_violet medium nicdark_radius nicdark_shadow nicdark_press">MORE INFO</a>
-                </div>
+            <p class="app-tagline">
+              Keep your chapter's everyday chaos pleasantly under control.
+            </p>
+            <p class="meta">
+              <span>🏛 For fraternities, sororities, and house leadership.</span>
+            </p>
+            <ul class="bullet-list">
+              <li>
+                Track members, roles, and key contact information in one place.
+              </li>
+              <li>
+                Organize events, meetings, and house tasks—without the dozen
+                overlapping group chats.
+              </li>
+              <li>
+                Record notes, keep simple status info, and help new officers get
+                up to speed quickly.
+              </li>
+            </ul>
+            <div class="chip-row">
+              <span class="chip">Built for iOS</span>
+              <span class="chip">Focused on privacy</span>
+              <span class="chip">Made for busy officers</span>
             </div>
-        </div>
-
-        <div class="grid grid_3">
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center"> 
-                <div style="background:url(img/excursions/img5.jpg); background-size:cover;" class="nicdark_archive1 nicdark_radius">
-                    <div class="nicdark_filter yellow nicdark_radius_top">
-                        <div class="nicdark_space60"></div>
-                        <a href="#" class="nicdark_zoom white nicdark_btn_icon nicdark_bg_greydark big nicdark_radius_circle">80.00<br><small>USD</small></a>
-                        <div class="nicdark_space60"></div>
-                    </div>
-                </div>
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">ACRYLIC PAINTING</h4>
-                </div>
-                <div class="nicdark_margin20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam condimentum nec. Morbi a commodo neque, sit amet tempor arcu..</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-course.html" class="white nicdark_btn nicdark_bg_yellow medium nicdark_radius nicdark_shadow nicdark_press">MORE INFO</a>
-                </div>
+            <p class="meta">
+              The Greek House Management app is designed as a lightweight,
+              internal tool for your chapter—your data is focused on helping you
+              run the house, not on selling ads.
+            </p>
+            <div class="link-row">
+              <a href="#" class="link-text">
+                View on the App Store
+                <span>→</span>
+              </a>
             </div>
+          </article>
         </div>
+      </section>
 
-        <div class="grid grid_3">
-            <div class="nicdark_archive1 nicdark_bg_grey nicdark_radius nicdark_shadow center"> 
-                <div style="background:url(img/excursions/img7.jpg); background-size:cover;" class="nicdark_archive1 nicdark_radius">
-                    <div class="nicdark_filter red nicdark_radius_top">
-                        <div class="nicdark_space60"></div>
-                        <a href="#" class="nicdark_zoom white nicdark_btn_icon nicdark_bg_greydark big nicdark_radius_circle">21.00<br><small>USD</small></a>
-                        <div class="nicdark_space60"></div>
-                    </div>
-                </div>
-                <div class="nicdark_textevidence nicdark_bg_greydark">
-                    <h4 class="white nicdark_margin20">COOKING</h4>
-                </div>
-                <div class="nicdark_margin20">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam condimentum nec. Morbi a commodo neque, sit amet tempor arcu..</p>
-                    <div class="nicdark_space20"></div>
-                    <a href="single-course.html" class="white nicdark_btn nicdark_bg_red medium nicdark_radius nicdark_shadow nicdark_press">MORE INFO</a>
-                </div>
-            </div>
+      <!-- ABOUT / FUTURE PROJECTS -->
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="section-header">
+          <div>
+            <div class="tag">About ParkerDash</div>
+            <h2 id="about-title" class="section-title">
+              A small studio with a long project list
+            </h2>
+          </div>
         </div>
+        <p class="section-sub" style="margin-bottom: 16px;">
+          ParkerDash is a tiny, independent studio that likes to explore
+          different corners of software: whimsical family apps, practical tools
+          for real-world groups, and whatever else we can't stop talking about
+          over coffee.
+        </p>
+        <p class="section-sub">
+          Today that means
+          <strong>Magic Moments</strong> and
+          <strong>Greek House Management</strong>. Tomorrow it might be
+          something completely different—another app, a web project, or a tool
+          that solves one oddly specific problem beautifully.
+        </p>
+      </section>
 
-    </div>
-    <!--end nicdark_container-->
-            
-</section>
-<!--end section-->
-
-
-
-<!--start section-->
-<div class="nicdark_section">
-
-    <!--start nicdark_container-->
-    <div class="nicdark_container nicdark_clearfix">
-
-        <div class="nicdark_space40"></div>
-
-        <div class="grid grid_6 nicdark_aligncenter_iphoneland nicdark_aligncenter_iphonepotr">
-            <a class="nicdark_disable_floatright_iphoneland nicdark_disable_floatright_iphonepotr nicdark_btn nicdark_bg_green medium right nicdark_shadow nicdark_radius white nicdark_press"><i class="icon-left-open-outline"></i>&nbsp;&nbsp;&nbsp;PREV</a>
+      <!-- CONTACT / SUPPORT -->
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div class="contact">
+          <div>
+            <h2 id="contact-title" class="contact-title">Support &amp; questions</h2>
+            <p class="contact-sub">
+              Need help with an app, found a bug, or have an idea you'd like us
+              to hear? We actually read our email.
+            </p>
+            <p class="contact-detail">
+              <span>General &amp; app support:</span>
+              <a href="mailto:support@parkerdash.com">support@parkerdash.com</a>
+            </p>
+            <p class="contact-detail">
+              <span>Business &amp; collaboration:</span>
+              <a href="mailto:hello@parkerdash.com">hello@parkerdash.com</a>
+            </p>
+          </div>
+          <div>
+            <p class="contact-sub">
+              When you contact us, we'll use the information you provide
+              (typically your email address and message content) to respond to
+              your request. We don't sell your data, and we keep our analytics
+              and logging intentionally minimal.
+            </p>
+            <p class="contact-sub">
+              For full details on how we handle data across all ParkerDash
+              products, please see our
+              <a href="privacy.html" style="color: var(--accent); font-weight: 600;">Privacy Policy</a>.
+            </p>
+          </div>
         </div>
-        <div class="grid grid_6 nicdark_aligncenter_iphoneland nicdark_aligncenter_iphonepotr">
-            <a class=" nicdark_btn nicdark_bg_green medium nicdark_shadow nicdark_radius white nicdark_press">NEXT&nbsp;&nbsp;&nbsp;<i class="icon-right-open-outline"></i></a>
-        </div>
+      </section>
+    </main>
 
-        <div class="nicdark_space50"></div>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>© <span id="year"></span> ParkerDash. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#apps">Apps</a>
+        <a href="#contact">Support</a>
+      </div>
+    </footer>
+  </div>
 
-    </div>
-    <!--end nicdark_container-->
-            
-</div>
-<!--end section--><!--end-->
-
-<div class="nicdark_space3 nicdark_bg_gradient"></div>
-
-
-
-<!--start section-->
-<div class="nicdark_section nicdark_bg_greydark2 nicdark_copyrightlogo">
-
-    <!--start nicdark_container-->
-    <div class="nicdark_container nicdark_clearfix">
-
-        <div class="grid grid_6 nicdark_aligncenter_iphoneland nicdark_aligncenter_iphonepotr">
-            <div class="nicdark_space20"></div>
-            <p class="white">© Copyright 2014 by <span class="grey">NicDark</span>Themes.com - Made With <i class="icon-heart-filled red nicdark_zoom"></i> In Venice</p>
-        </div>
-
-
-        <div class="grid grid_6">
-            <div class="nicdark_focus right nicdark_aligncenter_iphoneland nicdark_aligncenter_iphonepotr">
-                <div class="nicdark_margin10">
-                    <a href="#" class="nicdark_facebook nicdark_press right nicdark_btn_icon small nicdark_radius white"><i class="icon-facebook-1"></i></a>
-                </div>
-                <div class="nicdark_margin10">
-                    <a href="#" class="nicdark_press right nicdark_btn_icon nicdark_bg_red nicdark_shadow small nicdark_radius white"><i class="icon-gplus"></i></a>
-                </div>
-                <div class="nicdark_margin10">
-                    <a href="#" class="nicdark_press right nicdark_btn_icon nicdark_bg_blue nicdark_shadow small nicdark_radius white"><i class="icon-twitter-1"></i></a>
-                </div>
-                <div class="nicdark_margin10">
-                    <a href="#start_nicdark_framework" class="nicdark_zoom nicdark_internal_link right nicdark_btn_icon nicdark_bg_greydark2 small nicdark_radius white"><i class="icon-up-outline"></i></a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!--end nicdark_container-->
-            
-</div>
-<!--end section-->        </div>
-    </div>
-
-    <!--main-->
-    <script src="js/main/jquery.min.js"></script> <!--Jquery-->
-    <script src="js/main/jquery-ui.js"></script> <!--Jquery UI-->
-    <script src="js/main/excanvas.js"></script> <!--canvas need for ie-->
-
-    <!--plugins-->
-    <script src="js/plugins/revslider/jquery.themepunch.tools.min.js"></script> <!--revslider-->
-    <script src="js/plugins/revslider/jquery.themepunch.revolution.min.js"></script> <!--revslider-->
-
-    <!--menu-->
-    <script src="js/plugins/menu/superfish.min.js"></script> <!--superfish-->
-    <script src="js/plugins/menu/tinynav.min.js"></script> <!--tinynav-->
-
-    <!--other-->
-    <script src="js/plugins/isotope/isotope.pkgd.min.js"></script> <!--isotope-->
-    <script src="js/plugins/mpopup/jquery.magnific-popup.min.js"></script> <!--mpopup-->
-    <script src="js/plugins/scroolto/scroolto.js"></script> <!--Scrool To-->
-    <script src="js/plugins/nicescrool/jquery.nicescroll.min.js"></script> <!--Nice Scroll-->
-    <script src="js/plugins/inview/jquery.inview.min.js"></script> <!--inview-->
-    <script src="js/plugins/parallax/jquery.parallax-1.1.3.js"></script> <!--parallax-->
-    <script src="js/plugins/countto/jquery.countTo.js"></script> <!--jquery.countTo-->
-    <script src="js/plugins/countdown/jquery.countdown.js"></script> <!--countdown-->
-    
-    <!--settings-->
-    <script src="js/settings.js"></script> <!--settings-->
-<!--custom js-->
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-
-        //START PARALLAX SECTIONS
-        $('#nicdark_parallax_title').parallax("50%", 0.3);
-        //END PARALLAX SECTIONS
-
-    });
-</script>
-<!--custom js-->
-
-</body>  
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear().toString();
+  </script>
+</body>
 </html>
